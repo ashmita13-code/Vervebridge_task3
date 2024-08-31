@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:#4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    color: #333;
+}
+
+#doctor-list {
+    margin-bottom: 2rem;
+}
+
+.doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Doctor Appointment Booking System</h1>
+    </header>
+    <main>
+        <section id="doctors">
+            <h2>Available Doctors</h2>
+            <div id="doctor-list"></div>
+        </section>
+        <section id="booking">
+            <h2>Book an Appointment</h2>
+            <form id="appointment-form" method="post">
+                <label for="patient_id">Patient ID:</label>
+                <input type="number" id="patient_id" name="patient_id" required>
+                <label for="doctor_id">Doctor ID:</label>
+                <select id="doctor_id" name="doctor_id" required></select>
+                <label for="appointment_date">Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+                <label for="appointment_time">Time:</label>
+                <input type="time" id="appointment_time" name="appointment_time" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
